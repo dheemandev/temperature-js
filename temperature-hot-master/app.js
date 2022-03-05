@@ -21,4 +21,9 @@ const displayTemparature = temparature => {
   innerText ('tempt' , temparature.main.temp);
   innerText ('condition', temparature.weather[0].main)
   console.log(temparature);
-}
+
+  // set wrather icon 
+   const url = ` http://openweathermap.org/img/wn/${temparature.weather[0].icon}@2x.png`
+   const iconImage = document.getElementById('weather-icon')
+   iconImage.setAttribute ('src', url);
+} 
